@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gorre Dinesh Chandan Reddy — CV</title>
+<style>
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url('./fonts/space-grotesk-latin.woff2') format('woff2');
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url('./fonts/space-grotesk-latin-ext.woff2') format('woff2');
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+
+  @font-face {
+    font-family: 'DM Sans';
+    src: url('./fonts/dm-sans-latin.woff2') format('woff2');
+    font-weight: 100 1000;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  @font-face {
+    font-family: 'DM Sans';
+    src: url('./fonts/dm-sans-latin-ext.woff2') format('woff2');
+    font-weight: 100 1000;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #1a1a2e;
+    background: #ffffff;
+    padding: 0;
+    margin: 0;
+  }
+
+  .page {
+    width: 100%;
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  /* === HEADER === */
+  .header {
+    margin-bottom: 11px;
+  }
+
+  .header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a1a2e;
+    letter-spacing: -0.02em;
+    margin-bottom: 5px;
+    line-height: 1.1;
+  }
+
+  .header-gradient {
+    height: 2px;
+    background: linear-gradient(to right, hsl(187, 74%, 32%), hsl(270, 70%, 45%));
+    border-radius: 1px;
+    margin-bottom: 10px;
+  }
+
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10.5px;
+    line-height: 1.4;
+    color: #555;
+  }
+
+  .contact-row a {
+    color: #555;
+    text-decoration: none;
+  }
+
+  .contact-row .separator {
+    color: #ccc;
+  }
+
+  /* === SECTIONS === */
+  .section {
+    margin-bottom: 8px;
+  }
+
+  .section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: hsl(187, 74%, 32%);
+    border-bottom: 1.5px solid #e2e2e2;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+
+  /* === PROFESSIONAL SUMMARY === */
+  .summary-text {
+    font-size: 11px;
+    line-height: 1.55;
+    color: #2f2f2f;
+  }
+
+  a {
+    white-space: nowrap;
+  }
+
+  /* === CORE COMPETENCIES === */
+  .competencies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .competency-tag {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    color: hsl(187, 74%, 28%);
+    background: hsl(187, 40%, 95%);
+    padding: 2px 8px;
+    border-radius: 3px;
+    border: 1px solid hsl(187, 40%, 88%);
+  }
+
+  /* === WORK EXPERIENCE === */
+  .job {
+    margin-bottom: 10px;
+  }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+
+  .job-company {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: hsl(270, 70%, 45%);
+  }
+
+  .job-period {
+    font-size: 10.5px;
+    color: #777;
+    white-space: nowrap;
+  }
+
+  .job-role {
+    font-size: 11px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+  }
+
+  .job-location {
+    font-size: 10px;
+    color: #888;
+  }
+
+  .job ul {
+    padding-left: 18px;
+    margin-top: 4px;
+  }
+
+  .job li {
+    font-size: 10.5px;
+    line-height: 1.45;
+    color: #333;
+    margin-bottom: 3px;
+  }
+
+  .job li strong {
+    font-weight: 600;
+  }
+
+  /* === PROJECTS === */
+  .project {
+    margin-bottom: 7px;
+  }
+
+  .project-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: hsl(270, 70%, 45%);
+  }
+
+  .project-badge {
+    font-size: 9px;
+    font-weight: 500;
+    color: hsl(187, 74%, 32%);
+    background: hsl(187, 40%, 95%);
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-left: 6px;
+  }
+
+  .project-desc {
+    font-size: 10.5px;
+    color: #444;
+    margin-top: 2px;
+    line-height: 1.45;
+  }
+
+  .project-tech {
+    font-size: 9.5px;
+    color: #888;
+    margin-top: 2px;
+  }
+
+  /* === EDUCATION === */
+  .edu-item {
+    margin-bottom: 8px;
+  }
+
+  .edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .edu-title {
+    font-weight: 600;
+    font-size: 11px;
+    color: #333;
+  }
+
+  .edu-org {
+    color: hsl(270, 70%, 45%);
+    font-weight: 500;
+  }
+
+  .edu-year {
+    font-size: 10px;
+    color: #777;
+    white-space: nowrap;
+  }
+
+  .edu-desc {
+    font-size: 10px;
+    color: #666;
+    margin-top: 2px;
+    line-height: 1.5;
+  }
+
+  /* === SKILLS === */
+  .skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .skill-item {
+    line-height: 1.45;
+  }
+
+  .skill-item {
+    font-size: 10.5px;
+    color: #444;
+  }
+
+  .skill-category {
+    font-weight: 600;
+    color: #333;
+    font-size: 10.5px;
+  }
+
+  /* === PRINT === */
+  @media print {
+    body {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      padding: 0;
+    }
+  }
+
+  /* === PAGE BREAK CONTROL === */
+  .avoid-break,
+  .job,
+  .project,
+  .edu-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header avoid-break">
+    <h1>Gorre Dinesh Chandan Reddy</h1>
+    <div class="header-gradient"></div>
+    <div class="contact-row">
+      <span>+91 7416767453</span>
+      <span class="separator">|</span>
+      <span>gorredinesh21@gmail.com</span>
+      <span class="separator">|</span>
+      <a href="https://linkedin.com/in/gorre-dinesh-chandan-reddy-2a5a32219">linkedin.com/in/gorre-dinesh-chandan-reddy</a>
+      <span class="separator">|</span>
+      <a href="https://portfolio-eight-coral-tabh47k4e7.vercel.app/">portfolio</a>
+      <span class="separator">|</span>
+      <a href="https://github.com/gorredinesh21">github.com/gorredinesh21</a>
+      <span class="separator">|</span>
+      <span>Mumbai, India</span>
+    </div>
+  </div>
+
+  <!-- PROFESSIONAL SUMMARY -->
+  <div class="section avoid-break">
+    <div class="section-title">Professional Summary</div>
+    <div class="summary-text">Associate AI/ML Engineer with strong software engineering fundamentals shipping production-ready, scalable AI services on a Databricks / PySpark / cloud stack. At Reliance Industries, builds production Generative AI applying RAG, LangChain/LangGraph, and vector retrieval (FAISS, ChromaDB) — including a RAG framework that scales Databricks Genie past its 30-table limit to 120+ tables across 9 spaces — plus near-real-time PySpark pipelines on Azure/ADF. IIT (ISM) Dhanbad CSE graduate with hands-on depth in REST/FastAPI services, deep learning, model training and quantitative evaluation, and MLOps.</div>
+  </div>
+
+  <!-- CORE COMPETENCIES -->
+  <div class="section">
+    <div class="section-title">Core Competencies</div>
+    <div class="competencies-grid">
+      <span class="competency-tag">Generative AI &amp; RAG</span>
+      <span class="competency-tag">LangChain / LangGraph</span>
+      <span class="competency-tag">Vector Databases (FAISS, ChromaDB)</span>
+      <span class="competency-tag">REST / FastAPI Services</span>
+      <span class="competency-tag">Databricks &amp; PySpark / SparkSQL</span>
+      <span class="competency-tag">Azure / AWS Cloud Platforms</span>
+      <span class="competency-tag">Deep Learning &amp; Model Evaluation</span>
+      <span class="competency-tag">MLOps &amp; Data Pipelines</span>
+    </div>
+  </div>
+
+  <!-- WORK EXPERIENCE -->
+  <div class="section">
+    <div class="section-title">Work Experience</div>
+    <div class="job avoid-break">
+      <div class="job-header">
+        <span class="job-company">Reliance Industries Ltd.</span>
+        <span class="job-period">Aug 2025 — Present</span>
+      </div>
+      <div class="job-role">Graduate Engineer Trainee (Data / AI Engineer) <span class="job-location">— Mumbai, India</span></div>
+      <ul>
+        <li><strong>Unified Genie Architecture (Production GenAI / RAG)</strong> — Designed and operated a production-ready, scalable RAG framework with LangChain that overcomes Databricks Genie's 30-table limitation by organizing 120+ tables across 9 Genie spaces, applying Generative AI to enterprise data.</li>
+        <li><strong>Intelligent Query Routing Engine (Vector Retrieval)</strong> — Built semantic retrieval pipelines over table/column metadata embeddings to dynamically route prompts to the relevant Genie space.</li>
+        <li><strong>Talk-to-Genie Service (REST / FastAPI)</strong> — Built an external web application exposing Databricks Genie through OAuth-secured REST APIs, enabling secure conversational access outside Databricks end to end.</li>
+        <li><strong>Near Real-Time Data Pipeline (Databricks / PySpark / Azure)</strong> — Built ADF ingestion pipelines on the Databricks/ADLS Gen2 stack supporting 15-minute refresh cycles with Landing → Bronze → Silver transformations.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section avoid-break">
+    <div class="section-title">Projects</div>
+
+    <div class="project">
+      <div class="project-title">GAN-Based Data Augmentation for Imbalanced Datasets<span class="project-badge">Model Training &amp; Quantitative Evaluation</span></div>
+      <div class="project-desc">Built an end-to-end deep-learning augmentation framework using a custom GAN and SMOTE to address class imbalance on a 10,000,000+ row credit-card dataset. Designed Generator/Discriminator networks with Xavier init, LeakyReLU, and BatchNorm for stable tabular GAN training. Trained Random Forest, XGBoost, LightGBM, and Gradient Boosting on real vs. real+augmented data with 5-fold cross-validation, baselining performance with quantitative metrics — recall improved 0.91 → 0.99 and false negatives cut to just 9.</div>
+      <div class="project-tech">Python, PyTorch, GANs, XGBoost, LightGBM, scikit-learn</div>
+    </div>
+
+    <div class="project">
+      <div class="project-title">CareerOS — Multi-Agent LLM Platform<span class="project-badge">Generative AI / LangGraph / FastAPI</span></div>
+      <div class="project-desc">Built an end-to-end Generative AI platform extracting job postings from LinkedIn, Indeed, and Telegram and generating tailored resumes per job description. Orchestrated a multi-agent LLM workflow with LangChain/LangGraph that scores fit probability and produces customised resumes, exposed through an interactive dashboard with analytics and downloadable output.</div>
+      <div class="project-tech">Python, Flask, FastAPI, SQLite, LangChain, LangGraph</div>
+    </div>
+
+    <div class="project" style="margin-bottom:0;">
+      <div class="project-title">Tinder AI Coach — Multimodal GenAI Service<span class="project-badge">RAG / FastAPI / Multimodal</span></div>
+      <div class="project-desc">Built a FastAPI service that standardizes and optimizes a user's dating profile and writes it back to the live account. Integrated Google Gemini for multimodal photo analysis and curated an India-context knowledge base that grounds advice via retrieval, with Hugging Face and Ollama model options.</div>
+      <div class="project-tech">Python, FastAPI, LangChain, Google Gemini, Hugging Face, Ollama</div>
+    </div>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section avoid-break">
+    <div class="section-title">Education</div>
+    <div class="edu-item">
+      <div class="edu-header">
+        <span class="edu-title">B.Tech, Computer Science and Engineering — <span class="edu-org">Indian Institute of Technology (ISM), Dhanbad</span></span>
+        <span class="edu-year">Dec 2021 — May 2025</span>
+      </div>
+      <div class="edu-desc">Relevant coursework: Data Structures &amp; Algorithms, OOP, DBMS, Software Engineering, Computer Networks, Deep Learning. Secured AIR 2903 in JEE Advanced; Top 200 of 18,500+ teams in the Amazon ML Challenge.</div>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section avoid-break" style="margin-bottom:0;">
+    <div class="section-title">Skills</div>
+    <div class="skills-grid">
+      <div class="skill-item"><span class="skill-category">Generative AI:</span> RAG, LangChain, LangGraph, Vector Databases (FAISS, ChromaDB), Agentic AI, MCP, Fine-tuning, Hugging Face, Ollama</div>
+      <div class="skill-item"><span class="skill-category">Data &amp; Platform Engineering:</span> Databricks, PySpark / SparkSQL, ADF, ADLS Gen2, Apache Spark, ETL, Data Warehousing, Delta Lake / Unity Catalog (Databricks governance), AWS, Azure</div>
+      <div class="skill-item"><span class="skill-category">Software Engineering &amp; APIs:</span> REST APIs, FastAPI, Flask, OAuth, MLOps / model lifecycle</div>
+      <div class="skill-item"><span class="skill-category">ML / DL:</span> Machine Learning, Deep Learning, NLP, CNN, LSTMs, BERT, Transformers, Transfer Learning, GANs, Computer Vision, TensorFlow, PyTorch, Keras, model training &amp; quantitative evaluation</div>
+      <div class="skill-item"><span class="skill-category">Languages / Databases:</span> Python, SQL, PostgreSQL, C++, C</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

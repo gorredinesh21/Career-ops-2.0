@@ -7,6 +7,32 @@
 # no dates, no extra text. Dates go in the date column.
 
 states:
+  # ── Dashboard action-tracking workflow (user-facing, shown in the dashboard) ──
+  - id: no_action
+    label: No Action Taken
+    aliases: [no action, none, untouched, no_action_taken, evaluated-no-action]
+    description: In tracker, no outreach/application action taken yet
+    dashboard_group: no_action
+
+  - id: linkedin_connect
+    label: Sent LinkedIn Connect
+    aliases: [linkedin connect, sent linkedin connect, linkedin, connect sent]
+    description: Sent a LinkedIn connection request to someone at the company
+    dashboard_group: linkedin_connect
+
+  - id: referral
+    label: Sent Referral Message
+    aliases: [referral, referal, sent referral message, referral message, sent referral]
+    description: Reached out to ask for a referral
+    dashboard_group: referral
+
+  - id: not_eligible
+    label: Not Eligible
+    aliases: [not eligible, ineligible, not_eligible]
+    description: Candidate not eligible for this role
+    dashboard_group: not_eligible
+
+  # ── Evaluation-pipeline states (written by the scan/eval pipeline; kept valid) ──
   - id: evaluated
     label: Evaluated
     aliases: [evaluada]

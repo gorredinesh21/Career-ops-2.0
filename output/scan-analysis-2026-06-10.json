@@ -1,0 +1,239 @@
+{
+  "total": 434,
+  "companies": 78,
+  "indiaCount": 245,
+  "remoteCount": 56,
+  "relevant": 42,
+  "distinctCities": [
+    "Bengaluru",
+    "Pune",
+    "Hyderabad",
+    "Mumbai",
+    "Chennai",
+    "Delhi/NCR",
+    "Gurugram",
+    "Kolkata"
+  ],
+  "byCity": [
+    [
+      "Bengaluru",
+      173
+    ],
+    [
+      "Non-India",
+      80
+    ],
+    [
+      "Remote",
+      56
+    ],
+    [
+      "Other",
+      53
+    ],
+    [
+      "Pune",
+      28
+    ],
+    [
+      "Hyderabad",
+      15
+    ],
+    [
+      "Mumbai",
+      10
+    ],
+    [
+      "Chennai",
+      7
+    ],
+    [
+      "India (other)",
+      5
+    ],
+    [
+      "Delhi/NCR",
+      3
+    ],
+    [
+      "Gurugram",
+      2
+    ],
+    [
+      "Kolkata",
+      2
+    ]
+  ],
+  "byCompany": [
+    [
+      "PhonePe",
+      71
+    ],
+    [
+      "Deepgram",
+      59
+    ],
+    [
+      "Freshworks",
+      56
+    ],
+    [
+      "Meesho",
+      51
+    ],
+    [
+      "Razorpay",
+      50
+    ],
+    [
+      "Druva",
+      29
+    ],
+    [
+      "Zeta",
+      27
+    ],
+    [
+      "Turing",
+      23
+    ],
+    [
+      "Mindtickle",
+      23
+    ],
+    [
+      "Groww",
+      18
+    ],
+    [
+      "Navi",
+      6
+    ],
+    [
+      "Gainsight",
+      6
+    ],
+    [
+      "CRED",
+      5
+    ],
+    [
+      "Smallest AI",
+      4
+    ],
+    [
+      "Unacademy",
+      3
+    ],
+    [
+      "Scaler",
+      2
+    ],
+    [
+      "Whatfix",
+      1
+    ]
+  ],
+  "byFamily": [
+    [
+      "Other",
+      133
+    ],
+    [
+      "Software Engineering",
+      100
+    ],
+    [
+      "Sales / GTM",
+      66
+    ],
+    [
+      "Solutions / Forward Deployed",
+      21
+    ],
+    [
+      "Marketing / Growth",
+      19
+    ],
+    [
+      "Ops / Program / Support",
+      17
+    ],
+    [
+      "Finance / Legal",
+      17
+    ],
+    [
+      "Product",
+      14
+    ],
+    [
+      "Design",
+      12
+    ],
+    [
+      "Data Science / Analytics",
+      12
+    ],
+    [
+      "AI / ML",
+      11
+    ],
+    [
+      "People / HR",
+      7
+    ],
+    [
+      "Data Engineering",
+      5
+    ]
+  ],
+  "bySeniority": [
+    [
+      "Senior / Lead",
+      232
+    ],
+    [
+      "Unspecified / IC",
+      116
+    ],
+    [
+      "Leadership / Staff+",
+      56
+    ],
+    [
+      "Mid",
+      22
+    ],
+    [
+      "Intern / Grad",
+      8
+    ]
+  ],
+  "relevantCities": [
+    [
+      "Bengaluru",
+      16
+    ],
+    [
+      "Non-India",
+      12
+    ],
+    [
+      "Remote",
+      6
+    ],
+    [
+      "Hyderabad",
+      4
+    ],
+    [
+      "Other",
+      2
+    ],
+    [
+      "Pune",
+      2
+    ]
+  ]
+}

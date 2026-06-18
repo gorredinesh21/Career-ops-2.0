@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<title>Scan Analysis 2026-06-10</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<style>
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:#0f1117;color:#e6e6e6;margin:0;padding:28px;}
+  h1{font-size:20px;margin:0 0 4px;} .sub{color:#8a8fa3;font-size:13px;margin-bottom:20px;}
+  .kpis{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:24px;}
+  .kpi{background:#1a1d29;border:1px solid #262a3a;border-radius:10px;padding:14px 18px;min-width:120px;}
+  .kpi .v{font-size:26px;font-weight:700;color:#4dd4c4;} .kpi .l{font-size:11px;color:#8a8fa3;text-transform:uppercase;letter-spacing:.05em;}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+  .card{background:#1a1d29;border:1px solid #262a3a;border-radius:12px;padding:18px;}
+  .card h2{font-size:14px;margin:0 0 14px;color:#c9b8ff;} .full{grid-column:1/-1;}
+  @media(max-width:900px){.grid{grid-template-columns:1fr;}}
+</style></head><body>
+<h1>Career-Ops Scan Analysis — 2026-06-10</h1>
+<div class="sub">Raw listings across 78 verified India ATS boards (before title/location filtering). Distinct Indian cities: Bengaluru, Pune, Hyderabad, Mumbai, Chennai, Delhi/NCR, Gurugram, Kolkata</div>
+<div class="kpis">
+  <div class="kpi"><div class="v">434</div><div class="l">Raw jobs</div></div>
+  <div class="kpi"><div class="v">245</div><div class="l">India-based</div></div>
+  <div class="kpi"><div class="v">56</div><div class="l">Remote</div></div>
+  <div class="kpi"><div class="v">8</div><div class="l">Indian cities</div></div>
+  <div class="kpi"><div class="v">42</div><div class="l">Relevant to profile</div></div>
+</div>
+<div class="grid">
+  <div class="card"><h2>By City / Location</h2><canvas id="city"></canvas></div>
+  <div class="card"><h2>By Role Family</h2><canvas id="family"></canvas></div>
+  <div class="card"><h2>By Company (board)</h2><canvas id="company"></canvas></div>
+  <div class="card"><h2>By Seniority (from title)</h2><canvas id="sen"></canvas></div>
+  <div class="card full"><h2>Profile-relevant jobs, by city</h2><canvas id="rel" height="80"></canvas></div>
+</div>
+<script>
+const D={"total":434,"companies":78,"indiaCount":245,"remoteCount":56,"relevant":42,"distinctCities":["Bengaluru","Pune","Hyderabad","Mumbai","Chennai","Delhi/NCR","Gurugram","Kolkata"],"byCity":[["Bengaluru",173],["Non-India",80],["Remote",56],["Other",53],["Pune",28],["Hyderabad",15],["Mumbai",10],["Chennai",7],["India (other)",5],["Delhi/NCR",3],["Gurugram",2],["Kolkata",2]],"byCompany":[["PhonePe",71],["Deepgram",59],["Freshworks",56],["Meesho",51],["Razorpay",50],["Druva",29],["Zeta",27],["Turing",23],["Mindtickle",23],["Groww",18],["Navi",6],["Gainsight",6],["CRED",5],["Smallest AI",4],["Unacademy",3],["Scaler",2],["Whatfix",1]],"byFamily":[["Other",133],["Software Engineering",100],["Sales / GTM",66],["Solutions / Forward Deployed",21],["Marketing / Growth",19],["Ops / Program / Support",17],["Finance / Legal",17],["Product",14],["Design",12],["Data Science / Analytics",12],["AI / ML",11],["People / HR",7],["Data Engineering",5]],"bySeniority":[["Senior / Lead",232],["Unspecified / IC",116],["Leadership / Staff+",56],["Mid",22],["Intern / Grad",8]],"relevantCities":[["Bengaluru",16],["Non-India",12],["Remote",6],["Hyderabad",4],["Other",2],["Pune",2]]};
+const palette=['#4dd4c4','#7c6cff','#ffb454','#ff6b8a','#5aa9ff','#9d6cff','#52d273','#f0c14b','#e07a5f','#8a8fa3','#c9b8ff','#3ddad7'];
+function hbar(id,pairs,horizontal){
+  new Chart(document.getElementById(id),{type:'bar',
+    data:{labels:pairs.map(p=>p[0]),datasets:[{data:pairs.map(p=>p[1]),backgroundColor:palette,borderRadius:5}]},
+    options:{indexAxis:horizontal?'y':'x',plugins:{legend:{display:false}},
+      scales:{x:{ticks:{color:'#8a8fa3'},grid:{color:'#23263400'}},y:{ticks:{color:'#cfd3e0'},grid:{color:'#262a3a'}}}}});
+}
+hbar('city',D.byCity,true);
+hbar('family',D.byFamily,true);
+hbar('company',D.byCompany,true);
+hbar('sen',D.bySeniority,false);
+hbar('rel',D.relevantCities,false);
+</script></body></html>

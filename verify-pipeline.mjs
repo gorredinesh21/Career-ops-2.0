@@ -37,6 +37,9 @@ mkdirSync(join(CAREER_OPS, 'data'), { recursive: true });
 mkdirSync(REPORTS_DIR, { recursive: true });
 
 const CANONICAL_STATUSES = [
+  // Dashboard action-tracking workflow
+  'no_action', 'linkedin_connect', 'referral', 'not_eligible',
+  // Evaluation-pipeline states
   'evaluated', 'applied', 'responded', 'interview',
   'offer', 'rejected', 'discarded', 'skip',
 ];
@@ -50,6 +53,11 @@ const ALIASES = {
   'rechazado': 'rejected', 'rechazada': 'rejected',
   'descartado': 'discarded', 'descartada': 'discarded', 'cerrada': 'discarded', 'cancelada': 'discarded',
   'no aplicar': 'skip', 'no_aplicar': 'skip', 'monitor': 'skip', 'geo blocker': 'skip',
+  // Dashboard action-tracking labels (as written in the Status column)
+  'no action taken': 'no_action', 'no action': 'no_action',
+  'sent linkedin connect': 'linkedin_connect', 'linkedin connect': 'linkedin_connect',
+  'sent referral message': 'referral', 'referral message': 'referral', 'referral': 'referral', 'referal': 'referral',
+  'not eligible': 'not_eligible', 'ineligible': 'not_eligible',
 };
 
 let errors = 0;
